@@ -9,7 +9,7 @@ description: >
 version:          1.0
 gitbook_version:  3.2.3
 
-url:              'https://mnchapel.github.io/deep_learning_models'
+url:              'https://mnchapel.github.io/deep_learning_models/'
 baseurl:          ''
 rss:              RSS
 
