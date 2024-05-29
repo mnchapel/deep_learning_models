@@ -9,8 +9,8 @@ description: >
 version:          1.0
 gitbook_version:  3.2.3
 
-url:              'https://mnchapel.github.io/deep_learning_models/'
-baseurl:          ''
+url:              'https://mnchapel.github.io'
+baseurl:          '/deep_learning_models'
 rss:              RSS
 
 # bootstrap: use the remote theme for the site itself
