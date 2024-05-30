@@ -1,7 +1,7 @@
 ---
 title: About
-author: Tao He
-date: 2022-02-04
+author: Marie-Neige Chapel
+date: 2024-05-29
 category: Jekyll
 layout: post
 ---
