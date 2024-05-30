@@ -1,7 +1,7 @@
 ---
 title: GoogLeNet
 author: Marie-Neige Chapel
-date: 2015-01-01
+date: 2015-06-08
 category: CNN
 layout: post
 ---
