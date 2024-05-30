@@ -1,0 +1,58 @@
+<div id="buttons">
+
+	{% if include.img_detailed %}
+		<button class="btn" onclick="showDetailed()">Detailed</button>
+	{% endif %}
+
+	{% if include.img_compact %}
+		<button class="btn" onclick="showCompact()">Compact</button>
+	{% endif %}
+
+<button class="btn" onclick="hide()">Hide</button>
+
+</div>
+
+<div id="div_model">
+	{% if include.img_detailed %}
+	<img id="model" src="{{ site.baseurl }}/{{ include.img_detailed }}" >
+	{% else %}
+	<img id="model" src="{{ site.baseurl }}/{{ include.img_compact }}" >
+	{% endif %}
+</div>
+
+<script>
+	function showDetailed() {
+		// console.log("showDetailed")
+		var div_model = document.getElementById("div_model");
+		var arc_img = document.getElementById("model");
+
+		div_model.style.maskImage = "none";
+		div_model.style.height = "100%"
+
+		arc_img.src = "{{ site.baseurl }}/{{ include.img_detailed }}";
+	}
+
+	function showCompact() {
+		// console.log("showCompact")
+		var div_model = document.getElementById("div_model");
+		var arc_img = document.getElementById("model");
+
+		div_model.style.maskImage = "none";
+		div_model.style.height = "100%"
+
+		arc_img.src = "{{ site.baseurl }}/{{ include.img_compact }}";
+	}
+
+	function hide() {
+		// console.log("hide")
+		var div_model = document.getElementById("div_model");
+		var arc_img = document.getElementById("model");
+
+		div_model.style.overflow = "hidden";
+		div_model.style.position = "relative";
+		div_model.style.height = "300px"
+		div_model.style.maskImage = "linear-gradient(to bottom, black calc(100% - 150px), transparent 100%)";
+
+		arc_img.styleposition = "absolute";
+	}
+</script>
