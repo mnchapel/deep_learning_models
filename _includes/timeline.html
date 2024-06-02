@@ -1,0 +1,141 @@
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'>
+  
+<!-- The Timeline -->
+
+<ul class="timeline">
+
+	{% assign reversed_posts = site.posts %}
+	
+	{% assign direction = "l" %}
+	{% assign previous_date = "now" %}
+
+	{% for post in reversed_posts %}
+
+		{% if previous_date == 'now' %}
+			<li>
+			{% if direction == "l" %}
+				<div class="direction-r">
+				{% assign direction = "r" %}
+			{% else %}
+				<div class="direction-l">
+				{% assign direction = "l" %}
+			{% endif %}
+
+			<div class="flag-wrapper">
+				<span class="flag">{{ post.title }}
+			
+			{% assign previous_date = post.date %}
+
+		{% elsif previous_date == post.date %}
+			<br>{{ post.title }}
+
+		{% else %}
+						</span>
+						<span class="time-wrapper"><span class="time">{{ previous_date | date: '%m-%Y' }}</span></span>
+					</div>
+				</div>
+			</li>
+			<li>
+				{% if direction == "l" %}
+					<div class="direction-r">
+					{% assign direction = "r" %}
+				{% else %}
+					<div class="direction-l">
+					{% assign direction = "l" %}
+				{% endif %}
+
+					<div class="flag-wrapper">
+						<span class="flag">{{ post.title }}
+			{% assign previous_date = post.date %}
+		{% endif %}
+	{% endfor %}
+				</span>
+				<span class="time-wrapper"><span class="time">{{ previous_date | date: '%m-%Y' }}</span></span>
+			</div>
+		</div>
+	</li>
+  
+</ul>
+
+
+
+
+
+
+<!-- {% assign all_posts = site.posts %}
+
+{% assign first_year = all_posts.first.date | date: '%Y' %}
+{% assign last_year = all_posts.last.date | date: '%Y' %}
+
+{% assign post_index = 0 %}
+
+<div class="timeline">
+	<div class="outer">
+		{% for year in (last_year..first_year) %}
+			
+			<div class="card">
+				{% for month in (1..12) %}
+					{% assign month_mod = month | modulo: 2 %}
+					{% if month_mod == 1 %}
+						{%- capture date_string %}01/{{month}}/{{year}}{%- endcapture %}
+						{% assign timeline_year_month = date_string | date: '%Y-%m' %}
+						<div class="month">
+							{% assign at_least_one_model = false %}
+
+							{% for post in all_posts %}
+								{% assign post_year_month = post.date | date: '%Y-%m' %}
+								{% if timeline_year_month == post_year_month %}
+									{% if at_least_one_model == false %}
+										{% assign at_least_one_model = true %}
+										<div class="model">{{ post.title }}
+									{% else %}
+										{{ post.title }}
+									{% endif %}
+								{% endif %}
+							{% endfor %}
+
+							{% if at_least_one_model %}
+								</div>
+								<div class="circle"></div>
+							{% endif %}
+						</div>
+					{% endif %}
+				{% endfor %}
+				<div class="month_padding"></div>
+			</div>
+
+			<div class="card">
+				<div class="month_padding"></div>
+				{% for month in (1..12) %}
+					{% assign month_mod = month | modulo: 2 %}
+					{% if month_mod == 0 %}
+						{%- capture date_string %}01/{{month}}/{{year}}{%- endcapture %}
+						{% assign timeline_year_month = date_string | date: '%Y-%m' %}
+						<div class="month">
+						{% assign at_least_one_model = false %}
+
+						{% for post in all_posts %}
+							{% assign post_year_month = post.date | date: '%Y-%m' %}
+							{% if timeline_year_month == post_year_month %}
+								{% if at_least_one_model == false %}
+									{% assign at_least_one_model = true %}
+									<div class="circle"></div>
+									<div class="model">{{ post.title }}
+								{% else %}
+									{{ post.title }}
+								{% endif %}
+							{% endif %}
+						{% endfor %}
+
+						{% if at_least_one_model %}
+							</div>
+						{% endif %}
+					</div>
+					{% endif %}
+				{% endfor %}
+			</div>
+
+		{% endfor %}
+		<div class="card"></div>
+	</div>
+</div> -->

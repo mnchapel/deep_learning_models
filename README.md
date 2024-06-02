@@ -1,14 +1,3 @@
----
-layout: home
-title: Deep Learning Models
-permalink: /
----
+Welcome on the Deep Learning Models repository.
 
-
-
-
-## License
-
-This work is open sourced under the Apache License, Version 2.0.
-
-Copyright 2019 Tao He.
+To visualize the models, please go to the [website](https://mnchapel.github.io/deep_learning_models/) of this repository.
