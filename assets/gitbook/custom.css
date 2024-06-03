@@ -30,7 +30,7 @@
 }
 
 .book-body .body-inner .page-wrapper {
-    min-height: calc(100% - 46px);
+    min-height: calc(100% - 66px);
 }
 
 .book-body .body-inner .page-wrapper .page-inner {

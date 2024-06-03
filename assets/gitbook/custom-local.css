@@ -5,9 +5,8 @@
  */
 
 img {
+	margin: 40px auto;
 	display: block;
-	margin-left: auto;
-	margin-right: auto;
 }
 
 .buttons {
@@ -28,6 +27,18 @@ img {
 
 button.margin-right {
 	margin-right: 20px;
+}
+
+/* Theme copyright */
+.theme-copyright {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	margin: 20px 0;
+	align-items: center;
+	justify-content: center;
+	bottom: 20px;
+	color: #ccc;
 }
 
 /* ================ The Timeline ================ */
