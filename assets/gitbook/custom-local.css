@@ -9,6 +9,10 @@ img {
 	display: block;
 }
 
+.markdown-section > p {
+	text-align: justify;
+}
+
 .buttons {
 	display: flex;
 	justify-content: center;
@@ -62,13 +66,13 @@ button.margin-right {
 	width: 6px;
 	height: 100%;
 	margin-left: -3px;
-	background: rgb(80, 80, 80);
-	background: -moz-linear-gradient(top, rgba(80, 80, 80, 0) 0%, rgb(80, 80, 80) 8%, rgb(80, 80, 80) 92%, rgba(80, 80, 80, 0) 100%);
+	background: rgb(210, 210, 210);
+	background: -moz-linear-gradient(top, rgba(210, 210, 210, 0) 0%, rgb(206, 206, 206) 8%, rgb(210, 210, 210) 92%, rgba(210, 210, 210, 0) 100%);
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(30, 87, 153, 1)), color-stop(100%, rgba(125, 185, 232, 1)));
-	background: -webkit-linear-gradient(top, rgba(80, 80, 80, 0) 0%, rgb(80, 80, 80) 8%, rgb(80, 80, 80) 92%, rgba(80, 80, 80, 0) 100%);
-	background: -o-linear-gradient(top, rgba(80, 80, 80, 0) 0%, rgb(80, 80, 80) 8%, rgb(80, 80, 80) 92%, rgba(80, 80, 80, 0) 100%);
-	background: -ms-linear-gradient(top, rgba(80, 80, 80, 0) 0%, rgb(80, 80, 80) 8%, rgb(80, 80, 80) 92%, rgba(80, 80, 80, 0) 100%);
-	background: linear-gradient(to bottom, rgba(80, 80, 80, 0) 0%, rgb(80, 80, 80) 8%, rgb(80, 80, 80) 92%, rgba(80, 80, 80, 0) 100%);
+	background: -webkit-linear-gradient(top, rgba(210, 210, 210, 0) 0%, rgb(210, 210, 210) 8%, rgb(210, 210, 210) 92%, rgba(210, 210, 210, 0) 100%);
+	background: -o-linear-gradient(top, rgba(210, 210, 210, 0) 0%, rgb(210, 210, 210) 8%, rgb(210, 210, 210) 92%, rgba(210, 210, 210, 0) 100%);
+	background: -ms-linear-gradient(top, rgba(210, 210, 210, 0) 0%, rgb(210, 210, 210) 8%, rgb(210, 210, 210) 92%, rgba(210, 210, 210, 0) 100%);
+	background: linear-gradient(to bottom, rgba(210, 210, 210, 0) 0%, rgb(210, 210, 210) 8%, rgb(210, 210, 210) 92%, rgba(210, 210, 210, 0) 100%);
 
 	z-index: 5;
 }
@@ -108,7 +112,7 @@ button.margin-right {
 .flag {
 	position: relative;
 	display: inline-block;
-	background: rgb(248, 248, 248);
+	background: rgb(240, 240, 240);
 	padding: 6px 10px;
 	border-radius: 5px;
 
@@ -140,7 +144,7 @@ button.margin-right {
 	margin-top: -10px;
 	background: #fff;
 	border-radius: 10px;
-	border: 4px solid rgb(255, 80, 80);
+	border: 4px solid rgb(120, 200, 255);
 	z-index: 10;
 }
 
@@ -157,7 +161,7 @@ button.margin-right {
 	width: 0;
 	margin-top: -8px;
 	border: solid transparent;
-	border-left-color: rgb(248, 248, 248);
+	border-left-color: rgb(240, 240, 240);
 	border-width: 8px;
 	pointer-events: none;
 }
@@ -171,7 +175,7 @@ button.margin-right {
 	width: 0;
 	margin-top: -8px;
 	border: solid transparent;
-	border-right-color: rgb(248, 248, 248);
+	border-right-color: rgb(240, 240, 240);
 	border-width: 8px;
 	pointer-events: none;
 }
@@ -181,7 +185,7 @@ button.margin-right {
 
 	line-height: 1em;
 	font-size: 0.66666em;
-	color: rgb(250, 80, 80);
+	color: rgb(120, 200, 255);
 	vertical-align: middle;
 }
 
