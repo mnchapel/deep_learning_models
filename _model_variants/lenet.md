@@ -1,5 +1,5 @@
 ---
-title: All LeNet Variants
+title: LeNet Variants
 author: Marie-Neige Chapel
 date: 2024-05-29
 category: Jekyll
