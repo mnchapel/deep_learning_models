@@ -1,52 +1,65 @@
 <div class="buttons">
 
 	{% if include.img_detailed %}
-		<button class="btn-archi margin-right" onclick="showDetailed()">Show detailed</button>
+		<button class="btn-archi margin-right" onclick="showDetailed('{{ include.model }}')">Show detailed</button>
 	{% endif %}
 
 	{% if include.img_compact %}
-		<button class="btn-archi margin-right" onclick="showCompact()">Show compact</button>
+		<button class="btn-archi margin-right" onclick="showCompact('{{ include.model }}')">Show compact</button>
 	{% endif %}
 
-	<button class="btn-archi" onclick="hide()">Hide</button>
+	<button class="btn-archi" onclick="hide('{{ include.model }}')">Hide</button>
 
 </div>
 
-<div id="div_model">
+<div id="div_model_{{ include.model }}">
 	{% if include.img_detailed %}
-	<img id="model" src="{{ site.baseurl }}/{{ include.img_detailed }}" >
-	{% else %}
-	<img id="model" src="{{ site.baseurl }}/{{ include.img_compact }}" >
+		<img id="model_detailed_{{ include.model }}" src="{{ site.baseurl }}/{{ include.img_detailed }}" >
+	{% endif %}
+
+	{% if include.img_compact %}
+		{% if include.img_detailed %}
+			<img id="model_compact_{{ include.model }}" style="display:none;" src="{{ site.baseurl }}/{{ include.img_compact }}" >
+		{% else %}
+			<img id="model_compact_{{ include.model }}" src="{{ site.baseurl }}/{{ include.img_compact }}" >
+		{% endif %}
 	{% endif %}
 </div>
 
 <script>
-	function showDetailed() {
-		// console.log("showDetailed")
-		var div_model = document.getElementById("div_model");
-		var arc_img = document.getElementById("model");
+	function showDetailed(model) {
+		div_model_concat = "div_model_".concat(model)
+		console.log("showDetailed ", div_model_concat)
+		var div_model = document.getElementById("div_model_".concat(model));
+		var img_model_det = document.getElementById("model_detailed_".concat(model));
+		var img_model_com = document.getElementById("model_compact_".concat(model));
 
 		div_model.style.maskImage = "none";
 		div_model.style.height = "100%"
 
-		arc_img.src = "{{ site.baseurl }}/{{ include.img_detailed }}";
+		img_model_com.style.display = "none";
+
+		img_model_det.style.display = "block";
 	}
 
-	function showCompact() {
+	function showCompact(model) {
 		// console.log("showCompact")
-		var div_model = document.getElementById("div_model");
-		var arc_img = document.getElementById("model");
+		var div_model = document.getElementById("div_model_".concat(model));
+		var img_model_det = document.getElementById("model_detailed_".concat(model));
+		var img_model_com = document.getElementById("model_compact_".concat(model));
 
 		div_model.style.maskImage = "none";
 		div_model.style.height = "100%"
 
-		arc_img.src = "{{ site.baseurl }}/{{ include.img_compact }}";
+		img_model_det.style.display = "none";
+
+		img_model_com.style.display = "block";
 	}
 
-	function hide() {
-		// console.log("hide")
-		var div_model = document.getElementById("div_model");
-		var arc_img = document.getElementById("model");
+	function hide(model) {
+		//  console.log("hide")
+		var div_model = document.getElementById("div_model_".concat(model));
+		var arc_img = document.getElementById("model_".concat(model));
 
 		div_model.style.overflow = "hidden";
 		div_model.style.position = "relative";
