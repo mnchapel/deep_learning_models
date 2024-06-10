@@ -8,11 +8,11 @@ layout: post
 
 ## LeNet-1
 
-{% include model_architecture.html img_detailed='assets/img/lenet_1_detailed.svg' %}
+{% include model_architecture.html model='lenet_1' img_detailed='assets/img/lenet_1_detailed.svg' %}
 
 ## LeNet-4
 
-{% include model_architecture.html img_detailed='assets/img/lenet_4_detailed.svg' %}
+{% include model_architecture.html model='lenet4' img_detailed='assets/img/lenet_4_detailed.svg' %}
 
 ## Bibliography
 

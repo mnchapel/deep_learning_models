@@ -6,11 +6,17 @@ category: CNN
 layout: post
 ---
 
-This network [1], also called Inception-v1, is a particular incarnation of the Inception architecture.
+GoogLeNet, also called Inception-v1, is a particular incarnation of the Inception architecture proposed by Szegedy et al. in 2015 [1].
+
+Network features:
+
+- 22 layers
+- use inception modules
+- use bottleneck before 3x3 and 5x5 convolutions
 
 ## Architecture
 
-{% include model_architecture.html img_detailed='assets/img/googlenet_detailed.svg' %}
+{% include model_architecture.html model='googlenet' img_detailed='assets/img/googlenet_detailed.svg' %}
 
 {% include_relative conv_relu.md %}
 
