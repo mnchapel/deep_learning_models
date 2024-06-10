@@ -6,4 +6,6 @@ category: Jekyll
 layout: post
 ---
 
-This is an about page.
+I am Marie-Neige Chapel, a postdoctoral researcher in computer vision.
+
+You can find my personal website [here](https://mnchapel.github.io/).
