@@ -14,6 +14,10 @@ layout: post
 
 {% include model_architecture.html model='lenet4' img_detailed='assets/img/lenet_4_detailed.svg' %}
 
+## LeNet-5
+
+{% include model_architecture.html model='lenet5' img_detailed='assets/img/lenet_5_detailed.svg' %}
+
 ## Bibliography
 
 - [1] [[Medium] Review: LeNet-1, LeNet-4, LeNet-5, Boosted LeNet-4 (Image Classification)](https://sh-tsang.medium.com/paper-brief-review-of-lenet-1-lenet-4-lenet-5-boosted-lenet-4-image-classification-1f5f809dbf17)
