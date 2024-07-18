@@ -45,9 +45,16 @@ button.margin-right {
 	color: #ccc;
 }
 
+/* toc-date */
+.chapter-year {
+	padding-left: 20px;
+	padding-top: 15px;
+	font-weight: bold;
+}
+
 /* ================ The Timeline ================ */
 /* https://webartdevelopers.com/blog/css-timeline-5/ */
-
+/*
 .timeline {
 	position: relative;
 	width: 660px;
@@ -213,10 +220,11 @@ button.margin-right {
 
 .direction-r .desc {
 	margin: 1em 0 0 0.75em;
-}
+}*/
 
 /* ================ Timeline Media Queries ================ */
 
+/*
 @media screen and (max-width: 660px) {
 
 	.timeline {
@@ -322,3 +330,4 @@ button.margin-right {
 	}
 
 }
+	*/
