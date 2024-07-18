@@ -27,14 +27,14 @@
         </div>
         <ul class="summary">
             {% if page.url == "/index.html" or page.url == "/" %}
-            <li class="chapter active" data-level="1.1" data-path="{{site.baseurl}}">
+            	<li class="chapter active" data-level="1.1" data-path="{{site.baseurl}}">
             {% else %}
-            <li class="chapter" data-level="1.1" data-path="{{site.baseurl}}">
+            	<li class="chapter" data-level="1.1" data-path="{{site.baseurl}}">
             {% endif %}
-                <a href="{{site.baseurl}}/" onclick="pageScrollToTop(this)">
-                    {{ site.title | escape }}
-                </a>
-            </li>
+					<a href="{{site.baseurl}}/" onclick="pageScrollToTop(this)">
+						Home
+					</a>
+            	</li>
 
             <li class="divider"></li>
 
@@ -48,7 +48,19 @@
                         {% assign reversed_posts = site[collection.label] %}
                     {% endif %}
 
+					{% assign previous_post_year = "now" | date: '%Y' %}
                     {% for post in reversed_posts %}
+						
+						<!-- Print year for posts only-->
+						{% if collection_label == "posts" %}
+							{% assign post_year = post.date | date: '%Y' %}
+							{% if previous_post_year != post_year %}
+								<div class="chapter-year">{{ post_year }}</div>
+								{% assign previous_post_year = post_year %}							
+							{% endif %}
+						{% endif %}
+
+						<!-- Create a new line in the left panel -->
                         {% if page.url == post.url %}
                         <li class="chapter active" data-level="1.2" data-path="{{site.baseurl}}{{post.url}}">
                         {% else %}
